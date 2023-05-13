@@ -1,0 +1,116 @@
+body {
+    max-width: 600px;
+    margin: 70px auto;
+    text-align: center;
+    padding: 24px;
+}
+
+body:hover {
+    border: 1px solid rgb(54, 3, 66);
+}
+
+#mensagem p {
+    padding: 40px;
+    color: yellowgreen;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+ol li {
+    background-color: rgb(65, 33, 65);
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    color: rgb(221, 118, 21);
+}
+
+h2 {
+    justify-content: center;
+    margin: 0 auto;
+    font-style: italic;
+    color: rgb(25, 63, 25);
+    max-width: 200px;
+}
+
+#javascript  {
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+li {
+    font-size: 16px;
+    text-transform: lowercase;
+    font-style: oblique;
+    color: steelblue;
+    background-color:rgb(198, 162, 133) ;
+    border-radius: 4px;
+}
+
+h1 {
+    background-color: rgb(51, 32, 109);
+    color: rgb(234, 239, 166);
+}
+
+h3 {
+    background-color: rgb(83, 83, 81);
+    font-weight: bold;
+    font-family: cursive;
+}
+
+h4 {
+    background-color: brown;
+    color: aliceblue;
+}
+
+h5 {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px 0;
+}
+
+button {
+    background-color: rgb(15, 112, 89);
+    color: #ccc;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(14, 55, 45);
+}
+
+h6 {
+    text-transform: lowercase;
+    border: 2px solid black;
+}
+
+strong {
+    color: blueviolet;
+    text-decoration: overline;
+}
+
+a {
+    display: block;
+    background-color: rgb(6, 7, 6);
+    color: #ccc;
+    padding: 8px 0;
+    margin-bottom: 20px;
+}
+
+#mensagem  {
+    font-size: 55px;
+    color: rgb(88, 25, 88);
+    padding: 4px;
+    text-decoration: underline;
+}
+
+p {
+    background-color: yellowgreen;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
