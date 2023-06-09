@@ -16,7 +16,7 @@ function calcular() {
 
 var resultado = document.getElementById('valor');
 function validateInput(resultado) {
-    resultado.value = resultado.value.replace(/[^0-9+\-*/.,]/g, '');
+    resultado.value = resultado.value.replace(/[^0-9+\-*/.,]/g, ''); //substitui os elementos
 }
 
 validateInput();
