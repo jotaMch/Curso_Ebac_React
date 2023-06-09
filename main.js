@@ -7,10 +7,10 @@ function insert(num) {
     }
 
 function calcular() {
-    var resultado = document.getElementById('valor').value;
+    var resultado = document.getElementById('valor').value; // pega o valor do input
 
     if(resultado) {
-        document.getElementById('valor').value = eval(resultado);
+        document.getElementById('valor').value = eval(resultado); 
     }
 }
 
