@@ -13,3 +13,10 @@ function calcular() {
         document.getElementById('valor').value = eval(resultado);
     }
 }
+
+var resultado = document.getElementById('valor');
+function validateInput(resultado) {
+    resultado.value = resultado.value.replace(/[^0-9+\-*/.,]/g, '');
+}
+
+validateInput();
