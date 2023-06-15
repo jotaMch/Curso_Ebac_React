@@ -1,22 +1,32 @@
+var resultado = document.getElementById('valor').value; // pega o valor do input
+
 function insert(num) {
-    document.getElementById('valor').value += num;
+    resultado.value += num;
 }
 
     function clean() {
-        document.getElementById('valor').value = "";
+        resultado.value = "";
     }
 
 function calcular() {
-    var resultado = document.getElementById('valor').value; // pega o valor do input
-
-    if(resultado) {
-        document.getElementById('valor').value = eval(resultado); 
+    var expressao = resultado.value;
+    if(expressao) {
+        resultado.value = eval(expressao); 
     }
 }
 
-var resultado = document.getElementById('valor');
-function validateInput(resultado) {
+function validateInput() {
     resultado.value = resultado.value.replace(/[^0-9+\-*/.,]/g, ''); //substitui os elementos
 }
+
+
+resultado.addEventListener('keydown', function(event) {
+    var tecla = event.key;
+    
+    if (tecla === 'Enter') {
+        event.preventDefault();
+        calcular();
+        }
+    });
 
 validateInput();
