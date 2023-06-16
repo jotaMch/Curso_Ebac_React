@@ -1,4 +1,4 @@
-var resultado = document.getElementById('valor').value; // pega o valor do input
+var resultado = document.getElementById('valor'); // pega o valor do input
 
 function insert(num) {
     resultado.value += num;
