@@ -24,7 +24,8 @@ form.addEventListener('submit', function(event) {
         const senioridadeInput = document.querySelector('input[name="senioridade"]:checked').value;
 
         if (nome.includes(nomeInput)) {
-            //alert("Nome já existe!");
+            alert("Nome já existe!");
+            alertaErro();
         } else {
             nome.push(nomeInput);
             idade.push(idadeInput);
@@ -55,8 +56,6 @@ form.addEventListener('submit', function(event) {
 function respostasTbody() {
     const corpoAtualiza = document.querySelector('tbody');
     corpoAtualiza.innerHTML = linhas;
-    corpoAtualiza.style.width = '500px';
-
 }
 
 function esconderGif() {
@@ -64,6 +63,13 @@ function esconderGif() {
     setTimeout(function() {
         loading.innerHTML = '';
     }, 1900);
+}
+
+function alertaErro() {
+    const errorClass = document.querySelector('.error');
+    const alertError = '<p> Atenção : esse nome já foi inserido </p>';
+
+    errorClass.innerHTML = alertError;
 }
 
 function limparCampos() {

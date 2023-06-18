@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa&family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -14,7 +17,7 @@
                 <h2>Registro de dados</h2>
                 <div class="nomeform">
                     <label for="name">Nome :</label>
-                    <input type="text" id="nome" required>
+                    <input type="text" id="nome" maxlength="40" required>
                 </div>
         
                 <label for="genero">Idade :</label>
@@ -41,7 +44,7 @@
         
                 <div class="prof">
                     <label for="profissao">Profissão :</label>
-                    <input type="text" id="profissao" required>
+                    <input type="text" id="profissao" maxlength="35" required>
                 </div>
     
     
@@ -60,11 +63,12 @@
                     <label for="Senior">Sênior</label>
                 </div>
                 <input type="submit" id="btn" class="enviar">
+                <div class="error"></div>
             </form>
         
             <div class="tabela">
                 <h2>Tabela de Informações</h1>
-                    <table id="respostas">
+                    <table id="respostas" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>Nome</th>

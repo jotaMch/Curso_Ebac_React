@@ -18,6 +18,7 @@ body, html {
 .container h1 {
     text-align: center;
     margin: 62px 0;
+    font-family: 'Changa', sans-serif;
 }
 
 .container .dados {
@@ -46,8 +47,22 @@ form .divisao label {
     padding-left: 6px;
 }
 
-.tabela {
-    max-width: 500px;
+label,
+th,
+td {
+    font-family: 'Kanit', sans-serif;
+}
+
+th {
+    padding: 16px;
+}
+
+td {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Changa', sans-serif;
 }
 
 .tabela h2 {
@@ -55,7 +70,7 @@ form .divisao label {
 }
 
 #respostas {
-    width: 100%;
+    max-width: 500px;
 }
 
 .enviar {
@@ -74,6 +89,15 @@ table, th, td {
     padding: 5px;
 }
 
+.tabela {
+    max-width: 500px;
+}
+
+table {
+    width: 100%;
+    
+}
+
 .loading {
     display: flex;
     justify-content: center;
@@ -83,5 +107,26 @@ table, th, td {
 }
 
 .loading img {
-    background-color: #aae7a4;
+    background-color: transparent;
+}
+
+.error p {
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(246, 12, 12);
+    border-radius: 2px;
+    padding: 6px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 320px;
+    }
+    .container .dados {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 90%;
+    }
 }
