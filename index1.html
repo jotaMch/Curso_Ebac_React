@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário / Saída de dados</h1>
+        <div class="dados">
+            <form id="form">
+                <h2>Registro de dados</h2>
+                <div class="nomeform">
+                    <label for="name">Nome :</label>
+                    <input type="text" id="nome" required>
+                </div>
+        
+                <label for="genero">Idade :</label>
+                <div class="divisao">
+                    <input type="radio" name="idade" value="18-25" required>
+                    <label for="idade">Entre 18 e 25</label>
+                </div>
+                <div class="divisao">
+                    <input type="radio" name="idade" value="26-31" required>
+                    <label for="idade">Entre 26 e 31</label>
+                </div>
+                <div class="divisao">
+                    <input type="radio" name="idade" value="32-38" required>
+                    <label for="idade">Entre 32 e 38</label>
+                </div>
+                <div class="divisao">
+                    <input type="radio" name="idade" value="39-46" required>
+                    <label for="idade">Entre 39 e 46</label>
+                </div>
+                <div class="divisao">
+                    <input type="radio" name="idade" value="50+" required>
+                    <label for="idade">50+</label>
+                </div>
+        
+                <div class="prof">
+                    <label for="profissao">Profissão :</label>
+                    <input type="text" id="profissao" required>
+                </div>
+    
+    
+                <label for="senioridade">Senioridade :</label>
+                
+                <div class="divisao">
+                    <input type="checkbox" name="senioridade" value="junior" id="junior">
+                    <label for="junior">Junior</label>                    
+                </div>
+                <div class="divisao">
+                    <input type="checkbox" name="senioridade" value="Pleno" id="Pleno">
+                    <label for="Pleno">Pleno</label>                    
+                </div>
+                <div class="divisao">
+                    <input type="checkbox" name="senioridade" value="Senior" id="Senior">
+                    <label for="Senior">Sênior</label>
+                </div>
+                <input type="submit" id="btn" class="enviar">
+            </form>
+        
+            <div class="tabela">
+                <h2>Tabela de Informações</h1>
+                    <table id="respostas">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Idade</th>
+                                <th>Profissão</th>
+                                <th>Senioridade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+        <div class="loading"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
