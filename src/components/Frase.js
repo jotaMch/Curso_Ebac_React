@@ -3,7 +3,13 @@ import React from 'react'
 function Frase() {
     return (
         <div>
-            <p>Este é o componente com uma frase</p>
+            <h1>Hello World</h1>
+            <h2>Hello World</h2>
+            <button>Hello World</button>
+            <h3>Hello World</h3>
+            <span>Hello World</span><br></br>
+            <strong>Hello World</strong><br></br>
+            <em>Hello World</em>
         </div>
     )
 }
