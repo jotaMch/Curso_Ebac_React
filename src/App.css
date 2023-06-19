@@ -38,6 +38,11 @@ body {
   text-transform: lowercase;
 }
 
+.hora h5 {
+  background-color: #7f898b;
+  color: #61dafb;
+}
+
 .hora span {
   color: springgreen;
   text-transform: uppercase;
