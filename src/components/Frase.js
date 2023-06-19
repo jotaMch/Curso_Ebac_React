@@ -3,13 +3,22 @@ import React from 'react'
 function Frase(props) {
     return (
         <div>
-            <h1>{props.name} World</h1>
-            <h2>{props.name} World</h2>
-            <button>{props.name} World</button>
-            <h3>{props.name} World</h3>
-            <span>{props.name} World</span><br></br>
-            <strong>{props.name} World</strong><br></br>
-            <em>{props.name} World</em>
+            <div class="hora">
+                <h5>{props.name} World</h5>
+                <p> as 17:13 de 19/06/2023</p>
+            </div>
+            <div class="hora">
+                <h2>{props.name} World</h2>
+                <p> as 17:13 de 19/06/2023</p>                                          
+            </div>
+            <div class="hora">
+                <button>{props.name} World</button>
+                <p> as 17:07 de 19/06/2023</p>
+            </div>
+            <div class="hora">
+                <li>{props.name} World</li>
+                <p> as 17:14 de 19/06/2023</p>
+            </div>
         </div>
     )
 }
