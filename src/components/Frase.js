@@ -1,15 +1,15 @@
 import React from 'react'
 
-function Frase() {
+function Frase(props) {
     return (
         <div>
-            <h1>Hello World</h1>
-            <h2>Hello World</h2>
-            <button>Hello World</button>
-            <h3>Hello World</h3>
-            <span>Hello World</span><br></br>
-            <strong>Hello World</strong><br></br>
-            <em>Hello World</em>
+            <h1>{props.name} World</h1>
+            <h2>{props.name} World</h2>
+            <button>{props.name} World</button>
+            <h3>{props.name} World</h3>
+            <span>{props.name} World</span><br></br>
+            <strong>{props.name} World</strong><br></br>
+            <em>{props.name} World</em>
         </div>
     )
 }
