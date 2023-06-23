@@ -9,9 +9,13 @@ body, html {
     height: 100vh;
 }
 
+body {
+    background-color: #d4fad1;
+}
+
 .container {
     display: block;
-    width: 800px;
+    width: 1000px;
     margin: 100px auto;
     position: relative;
 }
@@ -20,6 +24,7 @@ body, html {
     text-align: center;
     margin: 62px 0;
     font-family: 'Changa', sans-serif;
+    text-decoration: underline;
 }
 
 .container .dados {
@@ -36,8 +41,15 @@ body, html {
     margin: 8px 0;
 }
 
-form input {
+form {
+    width: 260px;
+}
+
+.nomeform input,
+.prof input {
     display: block;
+    width: 100%;
+    padding: 2px;
 }
 
 form .divisao {
@@ -52,14 +64,12 @@ label,
 th,
 td {
     font-family: 'Kanit', sans-serif;
-}
-
-th {
-    padding: 16px;
+    font-size: 18px;
 }
 
 td {
     text-align: center;
+    max-width: 150px;
 }
 
 h2 {
@@ -83,11 +93,13 @@ h2 {
     border: none;
     border-radius: 4px;
     margin-top: 14px;
+    cursor: pointer;
 }
 
 table, th, td {
     border: 1px solid black;
     padding: 5px;
+    background-color: rgba(0,0,0,0);
 }
 
 .tabela {
@@ -96,7 +108,7 @@ table, th, td {
 
 table {
     width: 100%;
-    
+    background-image: linear-gradient(to right top,#f1e7a0, #f1e7a0, #e1eda2, #cef4a8, #c5f1a7, #bceea6, #b3eaa5, #aae7a4);
 }
 
 .loading {
@@ -108,7 +120,7 @@ table {
 }
 
 .loading img {
-    background-color: transparent;
+    background-color: green;
 }
 
 .error p {
@@ -147,4 +159,41 @@ table {
         margin: 0 auto;
         padding: 8px;
     }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .tabela {
+        margin: 32px auto;
+    }
+
+    #respostas {
+        margin: 0 auto;
+    }
+
+    td {
+        padding: 2px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .container .dados {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 8px;
+    }
+
+        table {
+            width: 100%;
+            background-image: linear-gradient(45deg, #d4bfcb, #ebc2c9, #fec7be, #ffd1ae, #fde0a3, #f1e7a0, #e1eda2, #dcf8c0);
+        }
+
+        form {
+            margin: 0 auto;
+        }
 }

@@ -12,7 +12,7 @@ form.addEventListener('submit', function(event) {
 
     function loading() {
         const loadingClass = document.querySelector('.loading');
-        const loadingGif = '<img src="img/icons8-dots-loading.gif" alt="Carregando...">';
+        const loadingGif = '<img src="img/icons8-sand-timer-50.png" alt="Carregando...">';
     
         loadingClass.innerHTML = loadingGif;
     }
@@ -24,7 +24,7 @@ form.addEventListener('submit', function(event) {
         const senioridadeInput = document.querySelector('input[name="senioridade"]:checked').value;
 
         if (nome.includes(nomeInput)) {
-            alert("Nome já existe!");
+            //alert(`Nome ${nomeInput} já existe!`);
             alertaErro();
         } else {
             nome.push(nomeInput);
@@ -67,7 +67,8 @@ function esconderGif() {
 
 function alertaErro() {
     const errorClass = document.querySelector('.error');
-    const alertError = '<p> Atenção : esse nome já foi inserido </p>';
+    const nomeInput = document.getElementById('nome').value;
+    const alertError = `<p> Atenção: O nome ${nomeInput} já foi inserido </p>`;
 
     errorClass.innerHTML = alertError;
 }
