@@ -143,8 +143,12 @@ table {
         width: 100%;
     }
 
-    #respostas {
+    .tabela {
         max-width: 304px;
+    }
+
+    #respostas {
+        width: 100%;
     }
 
     td {
@@ -158,6 +162,10 @@ table {
         flex-direction: column;
         margin: 0 auto;
         padding: 8px;
+    }
+    
+    table, th, td {
+        padding: 3px;
     }
 }
 
