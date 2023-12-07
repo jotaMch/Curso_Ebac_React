@@ -6,20 +6,20 @@ function Header() {
     return(
         <>
         <header
-        className='bg-red-600 text-white flex justify-between items-center px-4 h-20' 
+        className='bg-transparent text-white flex justify-between items-center px-4 h-20' 
         >
-            <h1>olá</h1>
+            <h1>Relógios Im</h1>
             <ul
-            className='flex justify-around w-60 font-bold'
+            className='flex justify-around w-6/12 font-bold'
             >
                 <Link to='/'>
-                    <li>init</li>
+                    <li>Nossa coleção</li>
                 </Link>
                 <Link to='/form'>
-                    <li>Cadastro</li>
+                    <li>Faça seu pedido</li>
                 </Link>
                 <Link to='/list'>
-                    <li>Lista</li>
+                    <li>Lista de pedidoss</li>
                 </Link>
             </ul>
         </header>

@@ -1,24 +1,23 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router, Form } from 'react-router-dom';
-import Header from './components/header/Header';
+import './App.css';
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import FormToList from './components/form/Form';
 import ListOfForm from './components/list/content/List';
+import { ProviderDados } from './ContextDados';
+import Carousel from './components/carousel/Carousel';
 
 function App() {
-  
   return (
-    <div>
+    <ProviderDados>
       <Router>
         <Routes>
-              <Route path="/" element={<Header />} />
-              <Route path="/form" element={<FormToList />} />
-              <Route path="/list" element={<ListOfForm />} />
+          <Route path="/" element={<Carousel />} />
+          <Route path="/form" element={<FormToList />} />
+          <Route path="/list" element={<ListOfForm />} />
         </Routes>
       </Router>
-    </div>
+    </ProviderDados>
   );
 }
 
 export default App;
-
-

@@ -1,47 +1,50 @@
 import React, { useState } from 'react';
 import Header from '../header/Header';
+import { useRegister } from '../../ContextDados';
 
 function FormToList() {
-const [name, setName] = useState('');
-const [email, setEmail] = useState('');
-const [user, setUser] = useState({});
+    const { users, setUsers } = useRegister();
 
-const submitDados = (e) => {
-    e.preventDefault();
-    setUser({
-        name: name,
-        email: email
-    });/* 
-    setName('');
-    setEmail(''); */
-};
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
 
-return (
-        <div className='bg-blue-200 h-screen'>
+    const submitDados = (e) => {
+        e.preventDefault();
+        setUsers([
+        ...users,
+        {
+            name: name,
+            email: email
+        }
+        ]);
+    };
+
+    return (
+        <div className='h-screen'>
         <Header />
-        <form className='bg-blue-200 w-60 mx-auto mt-20' onSubmit={submitDados}>
-            <div>
-                <label htmlFor="name">Name:</label>
-                <input type="text" className='block border-2 border-gray-600 w-full rounded-3xl'
-                onChange={(e) => setName(e.target.value)}
-                />
-            </div>
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input type="email" className='block border-2 border-gray-600 w-full rounded-3xl'
-                onChange={(e) => setEmail(e.target.value)}
-                />
-            </div>
-            <button type="submit">
-                Enviar
-            </button>
-        </form>
-        <div>
-            <p>{user.name}</p>
-            <p>{user.email}</p>
+            <form className='w-8/12 lg:w-6/12 h-60 mx-auto mt-20 flex flex-col items-center justify-center' 
+            onSubmit={submitDados}>
+                <h3 className='text-[#111] font-bold mb-4'>Faça seu pedido!</h3>
+                <div className='w-10/12 mb-5'>
+                    <input
+                        type="text" placeholder='Modelo' required
+                        className='border border bg-transparent w-full h-10 pl-2 rounded'
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                </div>
+                <div className='w-10/12'>
+                    <input
+                        type="email" placeholder='Seu email' required
+                        className='border border bg-transparent w-full h-10 pl-2 rounded'
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <button type="submit" className='bg-[#111] rounded h-10 w-10/12 mt-5 text-white'>
+                    Enviar
+                </button>
+            </form>
         </div>
-        </div>
-    )
+    );
 }
 
 export default FormToList;
