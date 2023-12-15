@@ -2,8 +2,9 @@ import React from 'react';
 import './App.css';
 import Currency from './components/Currency';
 import Label from './components/Label';
+import RealLabel from './components/RealLabel';
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props); 
 
@@ -27,12 +28,19 @@ export default class App extends React.Component {
           <Currency
             value={this.state.value}
             parseTo="USD"
-            render={(parsedValue) => ( // Fix the syntax error here, change '=' to '=>'
+            render={(parsedValue) => (
               <Label title="Dólar" parsedValue={parsedValue} />
             )}
+          />
+          <RealLabel 
+            title="Real" 
+            value={this.state.value} 
+            parseTo="BRL"
           />
         </div>
       </div>
     );
   }
 }
+
+export default App;

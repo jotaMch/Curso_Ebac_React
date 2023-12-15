@@ -1,7 +1,7 @@
 import React from "react";
-import { withCurrency } from './Currency'; 
+import withCurrency from './whithCurrency'; 
 
-export default function RealLabel({ value }){
+function RealLabel({ value }){
     return(
         <div className="label">
             <p>Real</p>
